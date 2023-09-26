@@ -17,17 +17,17 @@ import pygame
 from gpiozero import Device, ButtonBoard, LEDBoard, pi_info
 from gpiozero.exc import BadPinFactory, PinFactoryFallback
 
-import pibooth
-from pibooth import fonts
-from pibooth import language
-from pibooth.counters import Counters
-from pibooth.utils import (LOGGER, PoolingTimer, configure_logging, get_crash_message,
+from . import pibooth
+from . import fonts
+from . import language
+from .counters import Counters
+from .utils import (LOGGER, PoolingTimer, configure_logging, get_crash_message,
                            set_logging_level, get_event_pos)
-from pibooth.states import StateMachine
-from pibooth.plugins import create_plugin_manager
-from pibooth.view import PiWindow
-from pibooth.config import PiConfigParser, PiConfigMenu
-from pibooth.printer import PRINTER_TASKS_UPDATED, Printer
+from .states import StateMachine
+from .plugins import create_plugin_manager
+from .view import PiWindow
+from .config import PiConfigParser, PiConfigMenu
+from .printer import PRINTER_TASKS_UPDATED, Printer
 
 
 # Set the default pin factory to a mock factory if pibooth is not started a Raspberry Pi
